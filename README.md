@@ -13,6 +13,8 @@ This repository serves as my playground for developing and exploring well-known 
 
 - **Stack**: A classic LIFO (Last In, First Out) data structure. This implementation supports typical stack operations such as `push`, `pop`, and `peek`.
 
+- **Queue**: A FIFO (First In, First Out) data structure. This implementation includes operations like `enqueue`, `dequeue`, and `peek`.
+
 ## Contributing
 
 If you have any suggestions for improvements or additional tests, feel free to reach out. Your contributions will help make this project even better.
@@ -25,4 +27,4 @@ If you have any suggestions for improvements or additional tests, feel free to r
 
 ### Contact
 
-[LinkedIn Profile](https://www.linkedin.com/in/ericmau/)
+[LinkedIn Profile - Eric Mauricio](https://www.linkedin.com/in/ericmau/)

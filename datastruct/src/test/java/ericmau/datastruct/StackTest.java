@@ -16,14 +16,7 @@ public class StackTest {
       stack.push(i);
     }
 
-    Node<Integer> tmpNode = stack.peek();
-    int i=0;
-    while (tmpNode != null) {
-      tmpNode = tmpNode.getNextNode();
-      i++;
-    }
-
-    assertEquals(stackSize, i);
+    assertEquals(Integer.valueOf(stackSize), Integer.valueOf(stack.size()));
   }
 
   @Test
@@ -82,6 +75,20 @@ public class StackTest {
     assertEquals(true, stack.isEmpty());
 
     System.out.println(stack.toString());
+
+  }
+
+  @Test
+  public void testPeek(){
+    Stack<Integer> stack = new Stack<>();
+    assertNull(stack.peek());
+
+    int stackSize = 15;
+    for (int i=0; i<stackSize;i++) {
+      stack.push(i);
+    } 
+    assertEquals(stackSize, stack.size());
+    assertEquals(Integer.valueOf(stackSize-1), stack.peek());
 
   }
 

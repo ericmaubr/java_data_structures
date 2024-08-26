@@ -28,7 +28,7 @@ public class Stack<T> {
   protected int size;
 
   /**
-   * Creates a new stack
+   * Creates a new stack.
    */
   public Stack() {
     this.topNode = null;
@@ -106,8 +106,13 @@ public class Stack<T> {
     * 
     * @return first node of the stack
     */
-  public Node<T> peek() {
-    return this.topNode;
+  public T peek() {
+    if (this.topNode != null ){
+      return this.topNode.getValue();
+    }
+    else {
+      return null;
+    }
   }
 
   /**

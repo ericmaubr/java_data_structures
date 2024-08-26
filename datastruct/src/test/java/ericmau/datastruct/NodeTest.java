@@ -42,6 +42,5 @@ public class NodeTest {
     assertEquals(node2, node1.getNextNode());
     assertEquals(node3, node2.getNextNode());
   }
-
-
+  
 }
