@@ -60,8 +60,6 @@ public class QueueTest {
 
         System.out.println("Empty queue");
         System.out.println(intQueue);
-
-
     }
 
     /**
@@ -96,8 +94,6 @@ public class QueueTest {
 
     }
 
-
-
     /**
      * Test of isEmpty method, of class Queue.
      */
@@ -109,8 +105,50 @@ public class QueueTest {
 
         instance.enqueue("bla"); 
         assertEquals(false, instance.isEmpty());
+    }
+
+    /**
+     * Test a series of enqueue and dequeue of class Queue.
+     */
+    @Test
+    public void testVariousOperations() {
+        System.out.println("Various Operations");
+        Queue<String> instance = new Queue<>();
+        assertEquals(true, instance.isEmpty());
+
+        instance.enqueue("first element");
+        instance.enqueue("second element");
+        instance.enqueue("third element");
+        instance.enqueue("forth element");
+
+        System.out.println(instance.toString());
+
+        assertEquals(false, instance.isEmpty());
+        assertEquals("first element", instance.peek());
+        assertEquals(4, instance.size());
+       
+        String value = instance.dequeue();
+        assertEquals(false, instance.isEmpty());
+        assertEquals("first element", value);
+        assertEquals(3, instance.size());
+        assertEquals("second element", instance.peek());
+        System.out.println(instance.toString());
+
+        value = instance.dequeue();
+        assertEquals(false, instance.isEmpty());
+        assertEquals("second element", value);
+        assertEquals(2, instance.size());
+        assertEquals("third element", instance.peek());
+        System.out.println(instance.toString());
+
+        instance.enqueue("fifth element");
+        assertEquals(false, instance.isEmpty());
+        assertEquals(3, instance.size());
+        assertEquals("third element", instance.peek());
+        System.out.println(instance.toString());
 
     }
+
 
 
 

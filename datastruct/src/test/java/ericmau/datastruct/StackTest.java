@@ -92,4 +92,47 @@ public class StackTest {
 
   }
 
+    /**
+     * Test a series of enqueue and dequeue of class Queue.
+     */
+    @Test
+    public void testVariousOperations() {
+        System.out.println("Various Operations");
+        Stack<String> instance = new Stack<>();
+        assertEquals(true, instance.isEmpty());
+
+        instance.push("first element");
+        instance.push("second element");
+        instance.push("third element");
+        instance.push("forth element");
+
+        System.out.println(instance.toString());
+
+        assertEquals(false, instance.isEmpty());
+        assertEquals("forth element", instance.peek());
+        assertEquals(4, instance.size());
+       
+        String value = instance.pop();
+        assertEquals(false, instance.isEmpty());
+        assertEquals("forth element", value);
+        assertEquals(3, instance.size());
+        assertEquals("third element", instance.peek());
+        System.out.println(instance.toString());
+
+        value = instance.pop();
+        assertEquals(false, instance.isEmpty());
+        assertEquals("third element", value);
+        assertEquals(2, instance.size());
+        assertEquals("second element", instance.peek());
+        System.out.println(instance.toString());
+
+        instance.push("fifth element");
+        assertEquals(false, instance.isEmpty());
+        assertEquals(3, instance.size());
+        assertEquals("fifth element", instance.peek());
+        System.out.println(instance.toString());
+
+    }
+
+
 }
